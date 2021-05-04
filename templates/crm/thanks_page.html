@@ -1,0 +1,20 @@
+{% extends 'crm/layout.html'%}
+{% block title %} Страница курса {% endblock %}
+
+{% block content%}
+
+ <h1>Курс {{ name }} добавлен! </h1>
+<form action="{% url 'thanks'%}" method="">
+    <label>Имя</label>
+    <input name="name">
+    <label>Старт курса</label>
+    <input name="start">
+    <label>Конец курса</label>
+    <input name="end">
+    <label>Количество лекций</label>
+    <input name="quantity">
+    <button type="submit">Добавить курс</button>
+    <a href="{% url 'course-detail' name %}" class="btn btn-warning">Узнать о курсе</a>
+</form>
+
+{% endblock %}

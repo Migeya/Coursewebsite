@@ -1,0 +1,12 @@
+{% extends 'crm/layout.html'%}
+{% block title %} Страница курса {% endblock %}
+
+{% block content%}
+<div class="features">
+    <h1>{{ course.course_name }}</h1>
+    <p>{{ course.course_start }}</p>
+    <p>{{ course.course_end }}</p>
+    <p>{{ course.lecture_quant }}</p>
+    <p>{{ course.text_all }}</p>
+</div>
+{% endblock %}

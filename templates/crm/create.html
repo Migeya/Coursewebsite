@@ -1,0 +1,24 @@
+{% extends 'crm/layout.html'%}
+{% block title %} Страница создания курса {% endblock %}
+
+{% block content%}
+
+<br>
+<br>
+<br>
+<br>
+<div class="features">
+    <h1>Страница создания курса</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.course_name }}<br>
+        {{ form.course_start }}<br>
+        {{ form.course_end }}<br>
+        {{ form.lecture_quant }}<br>
+        {{ form.text_all }}<br>
+        <span>{{ error}}</span>
+
+        <button class="btn btn-success" type="submit">Добавить курс</button>
+    </form>
+</div>
+{% endblock %}

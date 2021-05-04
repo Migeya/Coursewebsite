@@ -1,0 +1,31 @@
+{% extends 'crm/layout.html'%}
+{% block title %} Главная страница {% endblock %}
+
+{% block content%}
+
+<br>
+<br>
+<br>
+<br>
+<table border="2">
+    <tr>
+        <th>Id</th>
+        <th>Название курса</th>
+        <th>Начало курса</th>
+        <th>Конец курса</th>
+        <th>Количество лекций</th>
+    </tr>
+
+{% for obj in object_list %}
+    <tr>
+        <th>{{ obj.id }}</th>
+        <th>{{ obj.course_name }}</th>
+        <th>{{ obj.course_start }}</th>
+        <th>{{ obj.course_end }}</th>
+        <th>{{ obj.lecture_quant }}</th>
+        <th><a class="btn btn-warning">Узнать о курсе</a></th>
+    </tr>
+
+{% endfor %}
+
+{% endblock %}
